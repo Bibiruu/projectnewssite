@@ -1,0 +1,341 @@
+*{                      /*using this method to RESET the default margin around the pic!*/
+    padding:0;
+    margin: 0;
+}
+.blockchainbackground {
+    background-image: url("blockchainbackground.jpg");  /*defining the image first*/
+    background-size: cover;             /*covering the the page with the whole picture,meaning no partials*/
+    background-repeat: no-repeat;       /*meaning we wont repeat it many times in a row*/
+    height: 100vh;      /*VIEWPORTHEIGHT, takes the complete 100% height of the page, automtic adjustment also in RESPOSSIVE DESIGN*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+/*style font imported*/
+
+
+
+li, a, button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: aliceblue;
+    text-decoration: none;   /*no line drawn, existing decoration removed*/
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px white;
+}
+
+.fuego {                    /*the logo on the nav*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    cursor:pointer;
+    border: solid;
+    border: repeat 1px;
+    padding: 5px;
+    animation: blinker 3s linear infinite;
+}
+@keyframes blinker {    /*blink effect*/
+    50% {
+      opacity: 0;
+    }
+}
+
+.navlinks { 
+    list-style: none;       /*taking the bulletpoints out*/
+}
+
+.navlinks li {
+    display: inline-block;  /*setting it vertically*/
+    padding: 0px 20px;
+}
+
+.navlinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navlinks li a:hover{
+    color: aqua;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {          /*when pressing the button change effect*/
+    background-color: rgba(41, 146, 172, 0.644);
+}
+
+
+.blink {
+    font-size: 15px;
+    animation: cursor 1s infinite step-end, typing 15s infinite steps(35);
+    white-space: nowrap; 
+    overflow: hidden;       /*overflow clipped,rest of the content is hidden*/
+  }
+  
+  @keyframes cursor{
+    0%, 100%{border-color: transparent;}
+    50% {border-color: #000;}
+  }
+  
+  @keyframes typing{
+    0%{ width: 0ch} /*Text is hidden*/
+    30%{ width: 80ch;} /*The enitre header will be typed out !If you go lower the text is CUT SHORT*/
+    80%{ width: 10ch;} /*Text stays visible*/
+    90%{ width: 0ch;} /*Text is deleted*/
+    100%{ width: 0ch;} /*Text stays hidden*/
+  }
+
+.grid-parent {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);         /*how many rows or columns we want +size 1 FR*/
+    grid-template-rows: repeat(2, 300px);       /*use the function first amount of rows then the size*/
+    padding-top: 5px;
+}
+
+
+.grid-item-ul > img {       /*NEWSHEADERPIC*/
+    grid-column: span 1/3;
+    object-fit: cover;
+    width:100%;
+    max-height: 80%;
+    padding-top: 5px;
+    padding-left: 10px;
+    box-shadow: 5px 5px 5px white;
+    border-radius: 20px;
+   
+}
+
+.grid-item-ur {
+    grid-column: span 1;
+    width: 100%;
+    }
+
+.grid-item-newsheaderinfo {     /*news text info*/
+    color:aliceblue;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cormorant', serif;
+}
+
+
+
+.grid-news {
+    grid-column: span 2;    /*expanding uptil 1-2. ending on span2*/
+    display:grid;
+    width: 100%;            /*how spread is the layout*/
+    max-height: 80%;
+    gap: 10px;
+    text-align:right;
+    
+}
+
+p {
+    padding: 15px;
+    font-family: 'Cormorant', serif;
+}
+
+
+.grid-item1 {
+    grid-column: 1/2;
+    background-image: url("newssitepic2.jpg");
+    background-size: cover;         /*covering the the page with the whole picture,meaning no partials*/
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #4d4d4e;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.grid-item2 {
+    background-image: url("newssitepic3.jpg");
+    grid-column: 2/3;
+    background-size: cover;         
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #4d4d4e;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.grid-item3 {
+    background-image: url("newssitepic4.jpg");
+    grid-column: 3/4;
+    background-size: cover;         
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #4d4d4e;
+    border-radius: 10px;
+    width: 100%;
+}
+  
+
+.grid-item4 {
+    background-image: url("newssitepic1.jpg");
+    grid-column: 4/5;
+    background-size: cover;         
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #4d4d4e;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.button {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+
+.footer{
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+@media (min-width:1025px) { 
+body { 
+    flex-direction: row; 
+}  
+
+img { 
+    width:40% 
+} 
+.grid-parent {
+    flex-direction: row; 
+} 
+.grid-item1 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item2 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item3 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item4 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+
+}   
+
+@media (min-width: 667px) and (max-width: 1024px) { 
+
+body { 
+    flex-direction: row; 
+}   
+
+img { 
+    width:40% 
+} 
+
+.grid-parent { 
+    flex-direction: row; 
+
+}
+.grid-item1 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+
+.grid-item2 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+
+.grid-item3 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item4 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+
+}  
+
+@media (max-width: 666px) { 
+
+body { 
+    flex-direction: row; 
+}
+
+img { 
+    width:40% 
+} 
+
+.grid-parent { 
+    flex-direction: row; 
+
+} 
+.grid-item1 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item2 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item3 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+.grid-item4 { 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+} 
+
+
+}
+
+
+
